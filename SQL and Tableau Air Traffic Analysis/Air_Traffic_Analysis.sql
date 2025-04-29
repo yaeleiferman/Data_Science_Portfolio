@@ -1,15 +1,12 @@
 /*
-Author: Yael Eiferman
-Date: 2023 - 09 - 14
-Assignment: Air Traffic Deliverable 1
+The goal is to provide actionable data-derived business insights using flight and airport data that will be useful in making 
+investment decisions. The data was originally sourced from the Bureau of Transportation Statistics.
 */
 
 -- setting the default schema to AirTraffic
 USE AirTraffic;
 
 /*
-Question 1 Part 1
-
 How many flights were there in 2018 and 2019 separately?
 */
 
@@ -19,8 +16,6 @@ GROUP BY YEAR(FlightDate);
 -- there were 3,218,653 flights in 2018 and 3,302,708 flights in 2019
 
 /*
-Question 1 Part 2
-
 In total, how many flights were cancelled or departed late over both years?
 */
 
@@ -36,22 +31,20 @@ WHERE DepDelay > 0
 -- 2,633,237 flights were cancelled or delayed
 
 /*
-Question 1 Part 3
-
-Show the number of flights that were cancelled broken down by the reason for cancellation.
+What is the number of flights that were cancelled broken down by the reason for cancellation?
 */
 
 SELECT CancellationReason, COUNT(*) AS cancelled_flights
 FROM flights
 WHERE CancellationReason IS NOT NULL
 GROUP BY CancellationReason;
--- 50,225 flights were cancelled because of weather, 34,141 because of the carrier, 7,962 because of the national air system, and 35 for security 
+/* 
+50,225 flights were cancelled because of weather, 34,141 because of the carrier, 
+7,962 because of the national air system, and 35 for security. 
+*/
 
 /*
-Question 1 Part 4
-
-For each month in 2019, report both the total number of flights and percentage of flights cancelled. 
-Based on your results, what might you say about the cyclic nature of airline revenue?
+For each month in 2019, what is the total number of flights and percentage of flights cancelled?
 */
 
 SELECT MONTH(FlightDate) AS month, COUNT(*) AS total_flights, (SUM(Cancelled)/COUNT(*))*100 AS percentage_cancelled
@@ -61,18 +54,19 @@ GROUP BY month
 ORDER BY month;
 
 /*
-It's pretty clear from the results that as the year progresses the number of cancelled flights decreases.
+Firstly, it's clear that airline travel/revenue is cyclical. From the previous query we see that weather is at least one cause.
+Overall, as the year progresses the number of cancelled flights decreases.
 The first 6 months have around a 2% cancellation rate, the next 3 months around 1%, and the final 3 months below 1%.
 Therefore it should be expected that airline revenue follows in the same pattern, increasing as the year goes along. 
 */
 
 /*
-Question 2 Part 1
-
-Create two new tables, one for each year (2018 and 2019) showing the total miles traveled and number of flights broken down by airline.
+Creating two new tables, one for each year showing the total miles traveled and number of flights broken down by airline.
 */
 
 -- 2018
+DROP TABLE flights_2018;
+
 CREATE TABLE flights_2018 AS
 SELECT AirlineName as airline, SUM(Distance) AS miles_traveled_2018, COUNT(*) AS flights_2018
 FROM flights
@@ -80,6 +74,8 @@ WHERE YEAR(FlightDate)=2018
 GROUP BY AirlineName;
 
 -- 2019
+DROP TABLE flights_2019;
+
 CREATE TABLE flights_2019 AS
 SELECT AirlineName as airline, SUM(Distance) AS miles_traveled_2019, COUNT(*) AS flights_2019
 FROM flights
@@ -87,9 +83,7 @@ WHERE YEAR(FlightDate)=2019
 GROUP BY AirlineName;
 
 /*
-Question 2 Part 2
-
-Using your new tables, find the year-over-year percent change in total flights and miles traveled for each airline.
+Using the new tables, what is the year-over-year percent change in total flights and miles traveled for each airline?
 */
 
 -- YoY % change for number of flights and total miles traveled
@@ -102,16 +96,13 @@ ON flights_2018.airline = flights_2019.airline;
 
 /*
 Based on these results, it's clear that Delta Air Lines is experiencing the most growth in both total flights and total miles traveled. 
-It seems that this would be the best airline to invest in, based on this data. 
+So far, it seems that this would be the best airline to invest in, based on this data. 
 */
 
 /*
-Question 3 Part 1
-
 Another critical piece of information is what airports the three airlines utilize most commonly.
-
-What are the names of the 10 most popular destination airports overall? 
-For this question, generate a SQL query that first joins flights and airports then does the necessary aggregation.
+What are the 10 most popular destination airports overall? 
+For this query I first join flights and airports then do the necessary aggregation.
 */
 
 SELECT airports.AirportName, COUNT(*) AS ArrivingFlights
@@ -123,13 +114,8 @@ ORDER BY ArrivingFlights DESC
 LIMIT 10;
 
 /*
-Question 3 Part 2
-
-Answer the same question but using a subquery to aggregate & limit the flight data before your join with the airport information, 
-hence optimizing your query runtime.
-
-If done correctly, the results of these two queries are the same, but their runtime is not. 
-In your SQL script, comment on the runtime: which is faster and why?
+For this query I use a subquery to aggregate and limit the flight data before joining with the airport information,
+in order to optimize the runtime.
 */
 
 SELECT airports.AirportName, destinations.ArrivingFlights
@@ -150,14 +136,11 @@ information to the data we actually want to see.
 
 
 /*
-Question 4 Part 1
+Since we don't have actual operating cost information available we need to infer a general overview of how each airline's costs 
+compare by looking at data that reflects equipment and fuel costs.
 
-The fund managers are interested in operating costs for each airline. We don't have actual cost or revenue information available, 
-but we may be able to infer a general overview of how each airline's costs compare by looking at data that reflects equipment and fuel costs.
-
-A flight's tail number is the actual number affixed to the fuselage of an aircraft, much like a car license plate. 
-As such, each plane has a unique tail number and the number of unique tail numbers for each airline should approximate how many planes 
-the airline operates in total. Using this information, determine the number of unique aircrafts each airline operated in total over 2018-2019.
+Each plane has a unique tail number and the number of unique tail numbers for each airline should approximate how many planes 
+the airline operates in total. 
 */
 
 SELECT AirlineName, COUNT(DISTINCT(Tail_Number)) AS Aircrafts
@@ -166,13 +149,8 @@ GROUP BY AirlineName;
 -- American Airlines has 993 aircrafts, Delta Air Lines 988, and Southwest Airlines 754
 
 /*
-Question 4 Part 2
-
 Similarly, the total miles traveled by each airline gives an idea of total fuel costs and the distance traveled per plane gives 
-an approximation of total equipment costs. What is the average distance traveled per aircraft for each of the three airlines?
-
-As before, use fully commented SQL queries to address the questions. 
-Compare the three airlines with respect to your findings: how do these results impact your estimates of each airline's finances?
+an approximation of equipment costs. 
 */
 
 -- querying for the total miles (shown in millions), total aircrafts, and aircraft average distance per airline (shown in millions)
@@ -183,29 +161,29 @@ GROUP BY AirlineName;
 
 /*
 Southwest Airlines has the least number of aircrafts, over two hundred less than both of the other airlines, yet it travels the most
-total miles, meaning that the average distance per aircraft is significantly higher than for the other airlines. Both of these data points
-indicate that Southwest Airlines has higher operating costs than either American Airlines or Delta Air Lines. Amongst these two airlines,
-American Airlines travels more total miles and more average miles per aircraft. Therefore Delta Air Lines looks to have the least amount
-of operating costs.
+total miles, meaning that the average distance per aircraft is significantly higher than for the other airlines. This means that it has 
+the highest fuel costs and the highest equipment costs per plane. However, this could just mean that it gets the most bang for its buck.
+If the ratio of tickets sold to average equipment cost is highest then that could mean they have the highest profits as well.
+Alternatively, if they are squeezing every last mile out of their planes and doing less maintenance that could mean higher rates of 
+cancelled flights and lower customer satisfaction, ultimately leading to lower priced tickets compared to the competition and
+less revenue. 
+
+How do we know which strategy is more profitable? There's not quite enough data to say for sure, but given that Delta is experiencing
+the most growth in total flights and total miles it seems that customers prefer that experience, and may be willing to pay more for it.
+Coupled with the fact that Delta has almost as many planes as American, this data indicates that Delta will probably experience
+the highest increase in revenue.
 */
 
 /*
-Question 5 Part 1
-
-Finally, the fund managers would like you to investigate the three airlines and major airports in terms of on-time performance as well. 
-For each of the following questions, consider early departures and arrivals (negative values) as on-time (0 delay) in your calculations.
-
 Next, we will look into on-time performance more granularly in relation to the time of departure. 
-We can break up the departure times into three (really four) categories as follows:
+We can break up the departure times into four categories as follows:
 
-CASE
-    WHEN HOUR(CRSDepTime) BETWEEN 7 AND 11 THEN "1-morning"
-    WHEN HOUR(CRSDepTime) BETWEEN 12 AND 16 THEN "2-afternoon"
-    WHEN HOUR(CRSDepTime) BETWEEN 17 AND 21 THEN "3-evening"
-    ELSE "4-night"
-END AS "time_of_day"
+Between 7 and 11 is morning;
+between 12 and 16 is afternoon;
+between 17 and 21 is evening;
+all else if night.
 
-Find the average departure delay for each time-of-day across the whole data set. Can you explain the pattern you see?
+What's the average departure delay for each time-of-day across the whole data set? 
 */
 
 SELECT 
@@ -224,13 +202,12 @@ ORDER BY time_of_day;
 Morning and night both have the least average departure delay with about an 8 minute delay (night a little less delayed than morning).
 The average delay for the afternoon almost doubles to under 14 minutes, and evening average delays are even higher at around 18 minutes.
 This pattern makes sense if people tend to like departing during their regular waking hours but at less obtrusive times, like after work. 
-The busier an aiport is the more likely there are to be delays.
+The busier an aiport is the more likely there are to be delays. Another explanation is that delays accumulate throughout the day,
+and so there are going to be more delays in the evening.
 */
 
 /*
-Question 5 Part 2
-
-Now, find the average departure delay for each airport and time-of-day combination.
+What's the average departure delay for each airport and time-of-day combination?
 */
 
 SELECT airports.AirportName, flights.time_of_day, flights.delay
@@ -248,12 +225,13 @@ JOIN
 	GROUP BY OriginAirportID, time_of_day
 	ORDER BY time_of_day) AS flights
 ON flights.OriginAirportID = airports.AirportID;
--- looking through some of the data, it seems the pattern holds across different airports - afternoon and evening flights have higher delays
+/*
+Looking through some of the data, it seems the pattern holds across different airports - 
+afternoon and evening flights have higher delays. The same explanations as before could apply.
+*/
 
 /*
-Question 5 Part 3
-
-Next, limit your average departure delay analysis to morning delays and airports with at least 10,000 flights.
+What's the average departure delay for morning flights at airports with at least 10,000 flights?
 */
 
 SELECT airports.AirportName, flights.avg_morn_delay
@@ -271,9 +249,7 @@ ORDER BY avg_morn_delay;
 -- morning average delays range from 5 minutes to over 13
 
 /*
-Question 5 Part 4
-
-Finally, name the top-10 airports with the highest average morning delay. In what cities are these airports located?
+What are the top-10 airports with the highest average morning delay? In what cities are these airports located?
 */
 
 SELECT airports.AirportName, flights.avg_morn_delay, airports.City
@@ -294,5 +270,5 @@ LIMIT 10;
 
 /*
 In total, it seems that Delta Airlines would be the best airline to invest in. They've experienced the highest growth amongst the three
-airlines while keeping operating costs low. 
+airlines. 
 */
