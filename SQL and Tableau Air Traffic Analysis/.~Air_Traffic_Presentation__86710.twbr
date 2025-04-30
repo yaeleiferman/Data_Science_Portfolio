@@ -1,0 +1,2743 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='mac' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <CascadingFilters />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='Air_Traffic_Presentation' path='/workbooks' revision='1.1' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='AirTraffic' inline='true' name='federated.1gkvuu60poo5i810t8n8a0ch0iaq' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='AirTraffic' name='federated.1gkvuu60poo5i810t8n8a0ch0iaqleaf'>
+            <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/yael/Documents/My Tableau Repository/Datasources/AirTraffic.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='09/19/2023 09:48:46 PM' username='tableau_internal_user' workgroup-auth-mode='as-is'>
+              <refresh>
+                <refresh-event add-from-file-path='AirTraffic' increment-value='%null%' refresh-type='create' rows-inserted='6521361' timestamp-start='2023-09-19 21:47:22.426' />
+              </refresh>
+            </connection>
+          </named-connection>
+        </named-connections>
+        <relation connection='federated.1gkvuu60poo5i810t8n8a0ch0iaqleaf' name='Extract' table='[Extract].[Extract]' type='table' />
+        <cols>
+          <map key='[AirTime]' value='[Extract].[AirTime]' />
+          <map key='[AirlineName]' value='[Extract].[AirlineName]' />
+          <map key='[AirportID]' value='[Extract].[AirportID]' />
+          <map key='[AirportName]' value='[Extract].[AirportName]' />
+          <map key='[ArrDelay]' value='[Extract].[ArrDelay]' />
+          <map key='[ArrTime]' value='[Extract].[ArrTime]' />
+          <map key='[CRSArrTime]' value='[Extract].[CRSArrTime]' />
+          <map key='[CRSDepTime]' value='[Extract].[CRSDepTime]' />
+          <map key='[CancellationReason]' value='[Extract].[CancellationReason]' />
+          <map key='[Cancelled]' value='[Extract].[Cancelled]' />
+          <map key='[City]' value='[Extract].[City]' />
+          <map key='[Country]' value='[Extract].[Country]' />
+          <map key='[DepDelay]' value='[Extract].[DepDelay]' />
+          <map key='[DepTime]' value='[Extract].[DepTime]' />
+          <map key='[DestAirportID]' value='[Extract].[DestAirportID]' />
+          <map key='[Distance]' value='[Extract].[Distance]' />
+          <map key='[Diverted]' value='[Extract].[Diverted]' />
+          <map key='[FlightDate]' value='[Extract].[FlightDate]' />
+          <map key='[Flight_Number_Reporting_Airline]' value='[Extract].[Flight_Number_Reporting_Airline]' />
+          <map key='[Latitude]' value='[Extract].[Latitude]' />
+          <map key='[Longitude]' value='[Extract].[Longitude]' />
+          <map key='[OriginAirportID]' value='[Extract].[OriginAirportID]' />
+          <map key='[Reporting_Airline]' value='[Extract].[Reporting_Airline]' />
+          <map key='[State]' value='[Extract].[State]' />
+          <map key='[Tail_Number]' value='[Extract].[Tail_Number]' />
+          <map key='[TaxiIn]' value='[Extract].[TaxiIn]' />
+          <map key='[TaxiOut]' value='[Extract].[TaxiOut]' />
+          <map key='[WheelsOff]' value='[Extract].[WheelsOff]' />
+          <map key='[WheelsOn]' value='[Extract].[WheelsOn]' />
+          <map key='[id (airports)]' value='[Extract].[id]' />
+          <map key='[id]' value='[Extract].[id1]' />
+        </cols>
+        <refresh>
+          <refresh-event add-from-file-path='AirTraffic' increment-value='%null%' refresh-type='create' rows-inserted='6521361' timestamp-start='2023-09-19 21:47:22.426' />
+        </refresh>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>id1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>id1</remote-alias>
+            <ordinal>0</ordinal>
+            <family>flights</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>6521361</approx-count>
+            <contains-null>true</contains-null>
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FlightDate</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[FlightDate]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>FlightDate</remote-alias>
+            <ordinal>1</ordinal>
+            <family>flights</family>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <approx-count>730</approx-count>
+            <contains-null>true</contains-null>
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Reporting_Airline</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Reporting_Airline]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Reporting_Airline</remote-alias>
+            <ordinal>2</ordinal>
+            <family>flights</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>3</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='3' name='LROOT_S1' />
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Tail_Number</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Tail_Number]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Tail_Number</remote-alias>
+            <ordinal>3</ordinal>
+            <family>flights</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>4119</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='3' name='LROOT_S1' />
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Flight_Number_Reporting_Airline</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Flight_Number_Reporting_Airline]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Flight_Number_Reporting_Airline</remote-alias>
+            <ordinal>4</ordinal>
+            <family>flights</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>21310</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='3' name='LROOT_S1' />
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OriginAirportID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[OriginAirportID]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>OriginAirportID</remote-alias>
+            <ordinal>5</ordinal>
+            <family>flights</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>221</approx-count>
+            <contains-null>true</contains-null>
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DestAirportID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[DestAirportID]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>DestAirportID</remote-alias>
+            <ordinal>6</ordinal>
+            <family>flights</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>203</approx-count>
+            <contains-null>true</contains-null>
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CRSDepTime</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CRSDepTime]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>CRSDepTime</remote-alias>
+            <ordinal>7</ordinal>
+            <family>flights</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1984</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='3' name='LROOT_S1' />
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DepTime</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[DepTime]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>DepTime</remote-alias>
+            <ordinal>8</ordinal>
+            <family>flights</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1766</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='3' name='LROOT_S1' />
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DepDelay</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[DepDelay]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>DepDelay</remote-alias>
+            <ordinal>9</ordinal>
+            <family>flights</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>953</approx-count>
+            <contains-null>true</contains-null>
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TaxiOut</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[TaxiOut]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>TaxiOut</remote-alias>
+            <ordinal>10</ordinal>
+            <family>flights</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>201</approx-count>
+            <contains-null>true</contains-null>
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WheelsOff</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[WheelsOff]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>WheelsOff</remote-alias>
+            <ordinal>11</ordinal>
+            <family>flights</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1842</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='3' name='LROOT_S1' />
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WheelsOn</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[WheelsOn]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>WheelsOn</remote-alias>
+            <ordinal>12</ordinal>
+            <family>flights</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>2043</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='3' name='LROOT_S1' />
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TaxiIn</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[TaxiIn]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>TaxiIn</remote-alias>
+            <ordinal>13</ordinal>
+            <family>flights</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>80</approx-count>
+            <contains-null>true</contains-null>
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CRSArrTime</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CRSArrTime]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>CRSArrTime</remote-alias>
+            <ordinal>14</ordinal>
+            <family>flights</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1623</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='3' name='LROOT_S1' />
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ArrTime</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ArrTime]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>ArrTime</remote-alias>
+            <ordinal>15</ordinal>
+            <family>flights</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>2223</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='3' name='LROOT_S1' />
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ArrDelay</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ArrDelay]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>ArrDelay</remote-alias>
+            <ordinal>16</ordinal>
+            <family>flights</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>1155</approx-count>
+            <contains-null>true</contains-null>
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Cancelled</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Cancelled]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Cancelled</remote-alias>
+            <ordinal>17</ordinal>
+            <family>flights</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>2</approx-count>
+            <contains-null>true</contains-null>
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Diverted</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Diverted]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Diverted</remote-alias>
+            <ordinal>18</ordinal>
+            <family>flights</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>2</approx-count>
+            <contains-null>true</contains-null>
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AirTime</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[AirTime]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>AirTime</remote-alias>
+            <ordinal>19</ordinal>
+            <family>flights</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>765</approx-count>
+            <contains-null>true</contains-null>
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Distance</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Distance]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Distance</remote-alias>
+            <ordinal>20</ordinal>
+            <family>flights</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>1514</approx-count>
+            <contains-null>true</contains-null>
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AirlineName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[AirlineName]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>AirlineName</remote-alias>
+            <ordinal>21</ordinal>
+            <family>flights</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>3</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='3' name='LROOT_S1' />
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CancellationReason</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CancellationReason]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>CancellationReason</remote-alias>
+            <ordinal>22</ordinal>
+            <family>flights</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>4</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='3' name='LROOT_S1' />
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id (airports)]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>23</ordinal>
+            <family>airports</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>221</approx-count>
+            <contains-null>true</contains-null>
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AirportID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[AirportID]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>AirportID</remote-alias>
+            <ordinal>24</ordinal>
+            <family>airports</family>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>221</approx-count>
+            <contains-null>true</contains-null>
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AirportName</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[AirportName]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>AirportName</remote-alias>
+            <ordinal>25</ordinal>
+            <family>airports</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>220</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='3' name='LROOT_S1' />
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[City]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>City</remote-alias>
+            <ordinal>26</ordinal>
+            <family>airports</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>216</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='3' name='LROOT_S1' />
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>27</ordinal>
+            <family>airports</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='3' name='LROOT_S1' />
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>State</remote-alias>
+            <ordinal>28</ordinal>
+            <family>airports</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>59</approx-count>
+            <contains-null>true</contains-null>
+            <collation flag='3' name='LROOT_S1' />
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Latitude]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Latitude</remote-alias>
+            <ordinal>29</ordinal>
+            <family>airports</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>221</approx-count>
+            <contains-null>true</contains-null>
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Longitude]</local-name>
+            <parent-name>[Extract]</parent-name>
+            <remote-alias>Longitude</remote-alias>
+            <ordinal>30</ordinal>
+            <family>airports</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>221</approx-count>
+            <contains-null>true</contains-null>
+            <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[pcdf:ctd:Tail_Number:qk]&quot;' value='% Difference in Aircrafts' />
+          <alias key='&quot;[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[pcdf:sum:Distance:qk]&quot;' value='% Difference in Distance' />
+        </aliases>
+      </column>
+      <column caption='Air Time' datatype='integer' name='[AirTime]' role='measure' type='quantitative' />
+      <column caption='Airline Name' datatype='string' name='[AirlineName]' role='dimension' type='nominal' />
+      <column caption='Airport ID' datatype='integer' name='[AirportID]' role='dimension' type='ordinal' />
+      <column caption='Airport Name' datatype='string' name='[AirportName]' role='dimension' type='nominal' />
+      <column caption='Arr Delay' datatype='integer' name='[ArrDelay]' role='measure' type='quantitative' />
+      <column caption='Arr Time' datatype='string' name='[ArrTime]' role='dimension' type='nominal' />
+      <column caption='CRS Arr Time' datatype='string' name='[CRSArrTime]' role='dimension' type='nominal' />
+      <column caption='CRS Dep Time' datatype='string' name='[CRSDepTime]' role='dimension' type='nominal' />
+      <column caption='on-time vs delayed departures' datatype='string' name='[Calculation_4602889928386678784]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [DepDelay] &lt;= 0 OR [DepDelay] = null THEN &quot;on-time&quot; ELSE &quot;delayed&quot; END' />
+      </column>
+      <column caption='average distance traveled by planes' datatype='real' name='[Calculation_4602889928724008962]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Distance]) / COUNTD([Tail_Number])' />
+      </column>
+      <column caption='Cancellation Reason' datatype='string' name='[CancellationReason]' role='dimension' type='nominal' />
+      <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Dep Delay' datatype='integer' name='[DepDelay]' role='measure' type='quantitative' />
+      <column caption='Dep Time' datatype='string' name='[DepTime]' role='dimension' type='nominal' />
+      <column caption='Dest Airport ID' datatype='integer' name='[DestAirportID]' role='dimension' type='ordinal' />
+      <column datatype='real' name='[Distance]' role='measure' type='quantitative' />
+      <column caption='Flight Date' datatype='date' name='[FlightDate]' role='dimension' type='ordinal' />
+      <column caption='Flight Number Reporting Airline' datatype='string' name='[Flight_Number_Reporting_Airline]' role='dimension' type='nominal' />
+      <column aggregation='Avg' datatype='real' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Origin Airport ID' datatype='integer' name='[OriginAirportID]' role='dimension' type='ordinal' />
+      <column caption='Reporting Airline' datatype='string' name='[Reporting_Airline]' role='dimension' type='nominal' />
+      <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Tail Number' datatype='string' name='[Tail_Number]' role='dimension' type='nominal' />
+      <column caption='Taxi In' datatype='integer' name='[TaxiIn]' role='measure' type='quantitative' />
+      <column caption='Taxi Out' datatype='integer' name='[TaxiOut]' role='measure' type='quantitative' />
+      <column caption='Wheels Off' datatype='string' name='[WheelsOff]' role='dimension' type='nominal' />
+      <column caption='Wheels On' datatype='string' name='[WheelsOn]' role='dimension' type='nominal' />
+      <column caption='flights' datatype='table' name='[__tableau_internal_object_id__].[flights_E09D0AD9000A4B749BA002FE11A93164]' role='measure' type='quantitative' />
+      <column caption='Id (Airports)' datatype='integer' name='[id (airports)]' role='dimension' type='ordinal' />
+      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column-instance column='[AirlineName]' derivation='None' name='[none:AirlineName:nk]' pivot='key' type='nominal' />
+      <column-instance column='[CancellationReason]' derivation='None' name='[none:CancellationReason:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Tail_Number]' derivation='CountD' name='[pcdf:ctd:Tail_Number:qk]' pivot='key' type='quantitative'>
+        <table-calc diff-options='Relative' level-address='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[yr:FlightDate:ok]' ordering-field='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[FlightDate]' ordering-type='Field' type='PctDiff'>
+          <address>
+            <value>-1</value>
+          </address>
+        </table-calc>
+      </column-instance>
+      <column-instance column='[Distance]' derivation='Sum' name='[pcdf:sum:Distance:qk]' pivot='key' type='quantitative'>
+        <table-calc diff-options='Relative' level-address='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[yr:FlightDate:ok]' ordering-field='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[FlightDate]' ordering-type='Field' type='PctDiff'>
+          <address>
+            <value>-1</value>
+          </address>
+        </table-calc>
+      </column-instance>
+      <column-instance column='[FlightDate]' derivation='Year' name='[yr:FlightDate:ok]' pivot='key' type='ordinal' />
+      <drill-paths>
+        <drill-path name='Country, State, City'>
+          <field>[Country]</field>
+          <field>[State]</field>
+          <field>[City]</field>
+        </drill-path>
+      </drill-paths>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='false' object-id='' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/yael/Documents/My Tableau Repository/Datasources/AirTraffic.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='09/19/2023 09:48:46 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <cols>
+            <map key='[AirTime]' value='[Extract].[AirTime]' />
+            <map key='[AirlineName]' value='[Extract].[AirlineName]' />
+            <map key='[AirportID]' value='[Extract].[AirportID]' />
+            <map key='[AirportName]' value='[Extract].[AirportName]' />
+            <map key='[ArrDelay]' value='[Extract].[ArrDelay]' />
+            <map key='[ArrTime]' value='[Extract].[ArrTime]' />
+            <map key='[CRSArrTime]' value='[Extract].[CRSArrTime]' />
+            <map key='[CRSDepTime]' value='[Extract].[CRSDepTime]' />
+            <map key='[CancellationReason]' value='[Extract].[CancellationReason]' />
+            <map key='[Cancelled]' value='[Extract].[Cancelled]' />
+            <map key='[City]' value='[Extract].[City]' />
+            <map key='[Country]' value='[Extract].[Country]' />
+            <map key='[DepDelay]' value='[Extract].[DepDelay]' />
+            <map key='[DepTime]' value='[Extract].[DepTime]' />
+            <map key='[DestAirportID]' value='[Extract].[DestAirportID]' />
+            <map key='[Distance]' value='[Extract].[Distance]' />
+            <map key='[Diverted]' value='[Extract].[Diverted]' />
+            <map key='[FlightDate]' value='[Extract].[FlightDate]' />
+            <map key='[Flight_Number_Reporting_Airline]' value='[Extract].[Flight_Number_Reporting_Airline]' />
+            <map key='[Latitude]' value='[Extract].[Latitude]' />
+            <map key='[Longitude]' value='[Extract].[Longitude]' />
+            <map key='[OriginAirportID]' value='[Extract].[OriginAirportID]' />
+            <map key='[Reporting_Airline]' value='[Extract].[Reporting_Airline]' />
+            <map key='[State]' value='[Extract].[State]' />
+            <map key='[Tail_Number]' value='[Extract].[Tail_Number]' />
+            <map key='[TaxiIn]' value='[Extract].[TaxiIn]' />
+            <map key='[TaxiOut]' value='[Extract].[TaxiOut]' />
+            <map key='[WheelsOff]' value='[Extract].[WheelsOff]' />
+            <map key='[WheelsOn]' value='[Extract].[WheelsOn]' />
+            <map key='[id (airports)]' value='[Extract].[id]' />
+            <map key='[id]' value='[Extract].[id1]' />
+          </cols>
+          <refresh>
+            <refresh-event add-from-file-path='AirTraffic' increment-value='%null%' refresh-type='create' rows-inserted='6521361' timestamp-start='2023-09-19 21:47:22.426' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>id1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>id1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>flights</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6521361</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>FlightDate</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[FlightDate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>FlightDate</remote-alias>
+              <ordinal>1</ordinal>
+              <family>flights</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>730</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Reporting_Airline</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Reporting_Airline]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Reporting_Airline</remote-alias>
+              <ordinal>2</ordinal>
+              <family>flights</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='3' name='LROOT_S1' />
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Tail_Number</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Tail_Number]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Tail_Number</remote-alias>
+              <ordinal>3</ordinal>
+              <family>flights</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4119</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='3' name='LROOT_S1' />
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Flight_Number_Reporting_Airline</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Flight_Number_Reporting_Airline]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Flight_Number_Reporting_Airline</remote-alias>
+              <ordinal>4</ordinal>
+              <family>flights</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>21310</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='3' name='LROOT_S1' />
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>OriginAirportID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[OriginAirportID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>OriginAirportID</remote-alias>
+              <ordinal>5</ordinal>
+              <family>flights</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>221</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>DestAirportID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[DestAirportID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>DestAirportID</remote-alias>
+              <ordinal>6</ordinal>
+              <family>flights</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>203</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CRSDepTime</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[CRSDepTime]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CRSDepTime</remote-alias>
+              <ordinal>7</ordinal>
+              <family>flights</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1984</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='3' name='LROOT_S1' />
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>DepTime</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[DepTime]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>DepTime</remote-alias>
+              <ordinal>8</ordinal>
+              <family>flights</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1766</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='3' name='LROOT_S1' />
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>DepDelay</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[DepDelay]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>DepDelay</remote-alias>
+              <ordinal>9</ordinal>
+              <family>flights</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>953</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TaxiOut</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[TaxiOut]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>TaxiOut</remote-alias>
+              <ordinal>10</ordinal>
+              <family>flights</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>201</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>WheelsOff</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[WheelsOff]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>WheelsOff</remote-alias>
+              <ordinal>11</ordinal>
+              <family>flights</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1842</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='3' name='LROOT_S1' />
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>WheelsOn</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[WheelsOn]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>WheelsOn</remote-alias>
+              <ordinal>12</ordinal>
+              <family>flights</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2043</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='3' name='LROOT_S1' />
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TaxiIn</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[TaxiIn]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>TaxiIn</remote-alias>
+              <ordinal>13</ordinal>
+              <family>flights</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>80</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CRSArrTime</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[CRSArrTime]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CRSArrTime</remote-alias>
+              <ordinal>14</ordinal>
+              <family>flights</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1623</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='3' name='LROOT_S1' />
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ArrTime</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ArrTime]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ArrTime</remote-alias>
+              <ordinal>15</ordinal>
+              <family>flights</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2223</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='3' name='LROOT_S1' />
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ArrDelay</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ArrDelay]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ArrDelay</remote-alias>
+              <ordinal>16</ordinal>
+              <family>flights</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1155</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Cancelled</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Cancelled]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Cancelled</remote-alias>
+              <ordinal>17</ordinal>
+              <family>flights</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Diverted</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Diverted]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Diverted</remote-alias>
+              <ordinal>18</ordinal>
+              <family>flights</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>AirTime</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[AirTime]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>AirTime</remote-alias>
+              <ordinal>19</ordinal>
+              <family>flights</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>765</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Distance</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Distance]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Distance</remote-alias>
+              <ordinal>20</ordinal>
+              <family>flights</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1514</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>AirlineName</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[AirlineName]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>AirlineName</remote-alias>
+              <ordinal>21</ordinal>
+              <family>flights</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='3' name='LROOT_S1' />
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>CancellationReason</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[CancellationReason]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>CancellationReason</remote-alias>
+              <ordinal>22</ordinal>
+              <family>flights</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='3' name='LROOT_S1' />
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[id (airports)]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>id</remote-alias>
+              <ordinal>23</ordinal>
+              <family>airports</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>221</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>AirportID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[AirportID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>AirportID</remote-alias>
+              <ordinal>24</ordinal>
+              <family>airports</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>221</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>AirportName</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[AirportName]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>AirportName</remote-alias>
+              <ordinal>25</ordinal>
+              <family>airports</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>220</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='3' name='LROOT_S1' />
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>City</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[City]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>City</remote-alias>
+              <ordinal>26</ordinal>
+              <family>airports</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>216</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='3' name='LROOT_S1' />
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Country</remote-alias>
+              <ordinal>27</ordinal>
+              <family>airports</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='3' name='LROOT_S1' />
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>State</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[State]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>State</remote-alias>
+              <ordinal>28</ordinal>
+              <family>airports</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>59</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='3' name='LROOT_S1' />
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Latitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Latitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Latitude</remote-alias>
+              <ordinal>29</ordinal>
+              <family>airports</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>221</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Longitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Longitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Longitude</remote-alias>
+              <ordinal>30</ordinal>
+              <family>airports</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>221</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[flights_E09D0AD9000A4B749BA002FE11A93164]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:AirlineName:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;American Airlines Inc.&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Southwest Airlines Co.&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Delta Air Lines Inc.&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[pcdf:ctd:Tail_Number:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[pcdf:sum:Distance:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:CancellationReason:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Weather&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Security&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;National Air System&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Carrier&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='flights' id='flights_E09D0AD9000A4B749BA002FE11A93164'>
+            <properties context=''>
+              <relation connection='federated.1gkvuu60poo5i810t8n8a0ch0iaqleaf' name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Q1.1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Total Flights per Carrier 2018-2019</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AirTraffic' name='federated.1gkvuu60poo5i810t8n8a0ch0iaq' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1gkvuu60poo5i810t8n8a0ch0iaq'>
+            <column caption='Airline Name' datatype='string' name='[AirlineName]' role='dimension' type='nominal' />
+            <column-instance column='[__tableau_internal_object_id__].[flights_E09D0AD9000A4B749BA002FE11A93164]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:flights_E09D0AD9000A4B749BA002FE11A93164:qk]' pivot='key' type='quantitative' />
+            <column caption='flights' datatype='table' name='[__tableau_internal_object_id__].[flights_E09D0AD9000A4B749BA002FE11A93164]' role='measure' type='quantitative' />
+            <column-instance column='[AirlineName]' derivation='None' name='[none:AirlineName:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[__tableau_internal_object_id__].[cnt:flights_E09D0AD9000A4B749BA002FE11A93164:qk]' field-type='quantitative' major-origin='0' major-spacing='1000000' minor-origin='0' minor-spacing='100000' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:AirlineName:nk]' value='152' />
+          </style-rule>
+          <style-rule element='field-labels-decoration'>
+            <format attr='vertical-align' value='auto' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#59a14f' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[__tableau_internal_object_id__].[cnt:flights_E09D0AD9000A4B749BA002FE11A93164:qk]</rows>
+        <cols>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:AirlineName:nk]</cols>
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='0' text-width='180'>
+            <formatted-text>
+              <run bold='true'>Southwest Airlines has significantly more flights than American Airlines or Delta Air Lines.</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord cell-offset='0.289474'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:AirlineName:nk]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>&quot;Southwest Airlines Co.&quot;</bucket>
+                    </multibucket>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='2187926.4779116465'>
+                  <node-reference>
+                    <axis>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[__tableau_internal_object_id__].[cnt:flights_E09D0AD9000A4B749BA002FE11A93164:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='-176' y='-53' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{8BF6B64A-9F3B-4F82-86E2-35FC4C5698EE}' />
+    </worksheet>
+    <worksheet name='Q1.2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Monthly Flights per Carrier</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AirTraffic' name='federated.1gkvuu60poo5i810t8n8a0ch0iaq' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1gkvuu60poo5i810t8n8a0ch0iaq'>
+            <column caption='Airline Name' datatype='string' name='[AirlineName]' role='dimension' type='nominal' />
+            <column caption='Flight Date' datatype='date' name='[FlightDate]' role='dimension' type='ordinal' />
+            <column-instance column='[__tableau_internal_object_id__].[flights_E09D0AD9000A4B749BA002FE11A93164]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:flights_E09D0AD9000A4B749BA002FE11A93164:qk]' pivot='key' type='quantitative' />
+            <column caption='flights' datatype='table' name='[__tableau_internal_object_id__].[flights_E09D0AD9000A4B749BA002FE11A93164]' role='measure' type='quantitative' />
+            <column-instance column='[FlightDate]' derivation='Month' name='[mn:FlightDate:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[AirlineName]' derivation='None' name='[none:AirlineName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[FlightDate]' derivation='Year' name='[yr:FlightDate:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[__tableau_internal_object_id__].[cnt:flights_E09D0AD9000A4B749BA002FE11A93164:qk]' field-type='quantitative' minor-origin='0' minor-spacing='10000' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[mn:FlightDate:ok]' value='29' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:AirlineName:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[__tableau_internal_object_id__].[cnt:flights_E09D0AD9000A4B749BA002FE11A93164:qk]</rows>
+        <cols>([federated.1gkvuu60poo5i810t8n8a0ch0iaq].[yr:FlightDate:ok] / [federated.1gkvuu60poo5i810t8n8a0ch0iaq].[mn:FlightDate:ok])</cols>
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='0' text-width='180'>
+            <formatted-text>
+              <run bold='true'>As expected Southwest Airlines has more monthly flights than either of the other competitors. What&apos;s interesting to note are the dips that all three experience in February and September.</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord cell-offset='0.891626'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[yr:FlightDate:ok]</field>
+                      <field>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[mn:FlightDate:ok]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>2018</bucket>
+                      <bucket>2</bucket>
+                    </multibucket>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='63966.953124999993'>
+                  <node-reference>
+                    <axis>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[__tableau_internal_object_id__].[cnt:flights_E09D0AD9000A4B749BA002FE11A93164:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='226' y='95' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{77F5696A-A212-49C7-99F8-B4AA1BCA660C}' />
+    </worksheet>
+    <worksheet name='Q1.3'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Most Utilized Origin Airports per Carrier</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AirTraffic' name='federated.1gkvuu60poo5i810t8n8a0ch0iaq' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1gkvuu60poo5i810t8n8a0ch0iaq'>
+            <column caption='Airline Name' datatype='string' name='[AirlineName]' role='dimension' type='nominal' />
+            <column caption='Airport Name' datatype='string' name='[AirportName]' role='dimension' type='nominal' />
+            <column-instance column='[__tableau_internal_object_id__].[flights_E09D0AD9000A4B749BA002FE11A93164]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:flights_E09D0AD9000A4B749BA002FE11A93164:qk]' pivot='key' type='quantitative' />
+            <column caption='flights' datatype='table' name='[__tableau_internal_object_id__].[flights_E09D0AD9000A4B749BA002FE11A93164]' role='measure' type='quantitative' />
+            <column-instance column='[AirlineName]' derivation='None' name='[none:AirlineName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[AirportName]' derivation='None' name='[none:AirportName:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <alphabetic-sort column='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:AirlineName:nk]' direction='DESC' />
+          <filter class='categorical' column='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:AirportName:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNT([__tableau_internal_object_id__].[flights_E09D0AD9000A4B749BA002FE11A93164])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:AirportName:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:AirportName:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[__tableau_internal_object_id__].[cnt:flights_E09D0AD9000A4B749BA002FE11A93164:qk]' shelf='columns' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:AirportName:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:AirportName:nk]' value='80' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:AirportName:nk]' value='-90' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:AirlineName:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[__tableau_internal_object_id__].[cnt:flights_E09D0AD9000A4B749BA002FE11A93164:qk]</rows>
+        <cols>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:AirportName:nk]</cols>
+        <annotations>
+          <annotation class='point' id='1' mark-position='1' pullback='0' text-width='180'>
+            <formatted-text>
+              <run bold='true'>The bulk of Delta&apos;s flights are coming from Atlanta&apos;s airport, with the majority of their remaining flights coming from Minneapolis.</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord cell-offset='0.7'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:AirportName:nk]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>&quot;Hartsfield-Jackson Atlanta International&quot;</bucket>
+                    </multibucket>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='410843.63350785343'>
+                  <node-reference>
+                    <axis>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[__tableau_internal_object_id__].[cnt:flights_E09D0AD9000A4B749BA002FE11A93164:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='147' y='-42' />
+          </annotation>
+          <annotation class='area' id='2' text-pinx='0.5' text-piny='0.5' text-width-delta='-18'>
+            <formatted-text>
+              <run>Southwest Airlines&apos; and American Airlines&apos; flights are more equally distributed between different airports. It seems that American Airlines&apos; flights are located more in the southern part of the U.S., while Southwest Airlines&apos; flights are distributed more northernly.</run>
+            </formatted-text>
+            <top-left>
+              <visual-coordinate class='axis'>
+                <x-coord cell-offset='0.7875'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:AirportName:nk]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>&quot;Harry Reid International&quot;</bucket>
+                    </multibucket>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='584347.31937172776'>
+                  <node-reference>
+                    <axis>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[__tableau_internal_object_id__].[cnt:flights_E09D0AD9000A4B749BA002FE11A93164:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </top-left>
+            <bottom-right>
+              <visual-coordinate class='axis'>
+                <x-coord cell-offset='0.425'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:AirportName:nk]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>&quot;Minneapolis-St Paul International&quot;</bucket>
+                    </multibucket>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='422301.42408376961'>
+                  <node-reference>
+                    <axis>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[__tableau_internal_object_id__].[cnt:flights_E09D0AD9000A4B749BA002FE11A93164:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </bottom-right>
+            <text x='0.5' y='0.5' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{A47DAA15-3189-4D01-9500-FADF4C61C147}' />
+    </worksheet>
+    <worksheet name='Q2.1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>On-time vs. Delayed Flights for 2019</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AirTraffic' name='federated.1gkvuu60poo5i810t8n8a0ch0iaq' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1gkvuu60poo5i810t8n8a0ch0iaq'>
+            <column caption='on-time vs delayed departures' datatype='string' name='[Calculation_4602889928386678784]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [DepDelay] &lt;= 0 OR [DepDelay] = null THEN &quot;on-time&quot; ELSE &quot;delayed&quot; END' />
+            </column>
+            <column caption='Dep Delay' datatype='integer' name='[DepDelay]' role='measure' type='quantitative' />
+            <column caption='Flight Date' datatype='date' name='[FlightDate]' role='dimension' type='ordinal' />
+            <column-instance column='[DepDelay]' derivation='Count' name='[cnt:DepDelay:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[FlightDate]' derivation='Month' name='[mn:FlightDate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_4602889928386678784]' derivation='None' name='[none:Calculation_4602889928386678784:nk]' pivot='key' type='nominal' />
+            <column-instance column='[FlightDate]' derivation='Year' name='[yr:FlightDate:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[yr:FlightDate:ok]'>
+            <groupfilter function='member' level='[yr:FlightDate:ok]' member='2019' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[yr:FlightDate:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:Calculation_4602889928386678784:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[cnt:DepDelay:qk]</rows>
+        <cols>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[mn:FlightDate:qk]</cols>
+        <annotations>
+          <annotation class='point' id='1' mark-position='1' pullback='0' text-width='180'>
+            <formatted-text>
+              <run bold='true'>The highest number of delayed flights occurred in June.</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='6.0357142857142856'>
+                  <node-reference>
+                    <axis>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[mn:FlightDate:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='126468.1673553719'>
+                  <node-reference>
+                    <axis>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[cnt:DepDelay:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='-48' y='108' />
+          </annotation>
+          <annotation class='point' id='2' mark-position='1' pullback='0' text-width='180'>
+            <formatted-text>
+              <run bold='true'>The lowest number of delayed flights occurred in September.</run>
+              <run>Æ&#10;</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='9.0455665024630534'>
+                  <node-reference>
+                    <axis>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[mn:FlightDate:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='77577.917355371901'>
+                  <node-reference>
+                    <axis>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[cnt:DepDelay:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='115' y='58' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{51900382-482B-4C2C-A752-9962B776BC51}' />
+    </worksheet>
+    <worksheet name='Q2.2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Average Departure Delays by State and Quarter</run>
+          </formatted-text>
+        </title>
+        <caption>
+          <formatted-text>
+            <run>The states with the highest average departure delays are North Dakota, West Virginia, and Wyoming. These three states had the highest average delays in Q1 of 2019. North Dakota had the highest average departure delay of any state or time period with 103.92 minutes in quarter three of 2018, as well as pretty high delays in quarters one and two of 2018 and quarter one of 2019. West Virginia and Wyoming both had higher delays in quarters two and four of 2018 and quarter one of 2019. 
+According to a news article from 2018, there was a big storm affecting flights at the end of that year in the Midwest and northern Plains. Likely this or other weather considerations caused the delays in these states.</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AirTraffic' name='federated.1gkvuu60poo5i810t8n8a0ch0iaq' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1gkvuu60poo5i810t8n8a0ch0iaq'>
+            <column caption='on-time vs delayed departures' datatype='string' name='[Calculation_4602889928386678784]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [DepDelay] &lt;= 0 OR [DepDelay] = null THEN &quot;on-time&quot; ELSE &quot;delayed&quot; END' />
+            </column>
+            <column caption='Dep Delay' datatype='integer' name='[DepDelay]' role='measure' type='quantitative' />
+            <column caption='Flight Date' datatype='date' name='[FlightDate]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[DepDelay]' derivation='Avg' name='[avg:DepDelay:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_4602889928386678784]' derivation='None' name='[none:Calculation_4602889928386678784:nk]' pivot='key' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[FlightDate]' derivation='Quarter' name='[qr:FlightDate:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[FlightDate]' derivation='Year' name='[yr:FlightDate:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:Calculation_4602889928386678784:nk]'>
+            <groupfilter function='member' level='[none:Calculation_4602889928386678784:nk]' member='&quot;delayed&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:Calculation_4602889928386678784:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[avg:DepDelay:qk]' palette='red_gold_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[avg:DepDelay:qk]' />
+              <text column='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[avg:DepDelay:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:State:nk]</rows>
+        <cols>([federated.1gkvuu60poo5i810t8n8a0ch0iaq].[yr:FlightDate:ok] / [federated.1gkvuu60poo5i810t8n8a0ch0iaq].[qr:FlightDate:ok])</cols>
+      </table>
+      <simple-id uuid='{8187260B-2E52-42CB-AE43-25FD0E2EA013}' />
+    </worksheet>
+    <worksheet name='Q2.3'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Average Departure Delays by State</run>
+          </formatted-text>
+        </title>
+        <caption>
+          <formatted-text>
+            <run>Based on this graphic and the table from the previous slide, it looks like the states with higher average departure delays are more often located in the northern part of the U.S. This makes sense if weather is the largest contributing factor to flight delays.</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AirTraffic' name='federated.1gkvuu60poo5i810t8n8a0ch0iaq' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1gkvuu60poo5i810t8n8a0ch0iaq'>
+            <column caption='on-time vs delayed departures' datatype='string' name='[Calculation_4602889928386678784]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [DepDelay] &lt;= 0 OR [DepDelay] = null THEN &quot;on-time&quot; ELSE &quot;delayed&quot; END' />
+            </column>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column caption='Dep Delay' datatype='integer' name='[DepDelay]' role='measure' type='quantitative' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[DepDelay]' derivation='Avg' name='[avg:DepDelay:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_4602889928386678784]' derivation='None' name='[none:Calculation_4602889928386678784:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+            <column-instance column='[DepDelay]' derivation='Sum' name='[sum:DepDelay:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:Calculation_4602889928386678784:nk]'>
+            <groupfilter function='member' level='[none:Calculation_4602889928386678784:nk]' member='&quot;delayed&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:Calculation_4602889928386678784:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[Longitude (generated)]' field-type='quantitative' max='34053845.335775524' min='23801018.750060037' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[Latitude (generated)]' field-type='quantitative' max='7329044.0950857494' min='2092572.4617305207' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[sum:DepDelay:qk]' />
+              <lod column='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:Country:nk]' />
+              <lod column='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:State:nk]' />
+              <color column='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[avg:DepDelay:qk]' />
+              <geometry column='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[Latitude (generated)]</rows>
+        <cols>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{6B2B7937-95F3-4B6A-9D39-51EDD7DE049C}' />
+    </worksheet>
+    <worksheet name='Q2.4'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Number of Cancelled Flights per Month and Reason</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AirTraffic' name='federated.1gkvuu60poo5i810t8n8a0ch0iaq' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1gkvuu60poo5i810t8n8a0ch0iaq'>
+            <column caption='Cancellation Reason' datatype='string' name='[CancellationReason]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[Cancelled]' role='measure' type='quantitative' />
+            <column caption='Flight Date' datatype='date' name='[FlightDate]' role='dimension' type='ordinal' />
+            <column-instance column='[FlightDate]' derivation='Month' name='[mn:FlightDate:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[CancellationReason]' derivation='None' name='[none:CancellationReason:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Cancelled]' derivation='Sum' name='[sum:Cancelled:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:CancellationReason:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:CancellationReason:nk]' member='&quot;Carrier&quot;' />
+              <groupfilter function='member' level='[none:CancellationReason:nk]' member='&quot;National Air System&quot;' />
+              <groupfilter function='member' level='[none:CancellationReason:nk]' member='&quot;Security&quot;' />
+              <groupfilter function='member' level='[none:CancellationReason:nk]' member='&quot;Weather&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:CancellationReason:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:CancellationReason:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[sum:Cancelled:qk]</rows>
+        <cols>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[mn:FlightDate:ok]</cols>
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='0' text-width='180'>
+            <formatted-text>
+              <run bold='true'>Cancellations from weather start out high and decrease as the year goes along. </run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord cell-offset='0.1'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[mn:FlightDate:ok]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>2</bucket>
+                    </multibucket>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='8170.9056224899596'>
+                  <node-reference>
+                    <axis>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[sum:Cancelled:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='183' y='-29' />
+          </annotation>
+          <annotation class='point' id='1' mark-position='1' pullback='0' text-width='180'>
+            <formatted-text>
+              <run bold='true'>Cancellations because of the National Air System peak in the summer months. Delays of this sort occur when there&apos;s a high volume of flights, so this makes sense if there&apos;s increased travel in the summer.</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord cell-offset='0.566667'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[mn:FlightDate:ok]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>7</bucket>
+                    </multibucket>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='1800.0060240963853'>
+                  <node-reference>
+                    <axis>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[sum:Cancelled:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='232' y='-221' />
+          </annotation>
+          <annotation class='point' id='2' mark-position='1' pullback='0' text-width='180'>
+            <formatted-text>
+              <run bold='true'>Cancellations because of the carrier peak in March but decrease thereafter.</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord cell-offset='0.516667'>
+                  <node-reference>
+                    <fields>
+                      <field>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[mn:FlightDate:ok]</field>
+                    </fields>
+                    <multibucket>
+                      <bucket>3</bucket>
+                    </multibucket>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='5874.8995983935738'>
+                  <node-reference>
+                    <axis>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[sum:Cancelled:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='232' y='-26' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{D544B3B0-3FA3-49EB-A692-3ED39ADD3F96}' />
+    </worksheet>
+    <worksheet name='Q3.1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Average Flight Time vs. Average Distance Traveled</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AirTraffic' name='federated.1gkvuu60poo5i810t8n8a0ch0iaq' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1gkvuu60poo5i810t8n8a0ch0iaq'>
+            <column caption='Air Time' datatype='integer' name='[AirTime]' role='measure' type='quantitative' />
+            <column caption='Airport Name' datatype='string' name='[AirportName]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Distance]' role='measure' type='quantitative' />
+            <column-instance column='[AirTime]' derivation='Avg' name='[avg:AirTime:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Distance]' derivation='Avg' name='[avg:Distance:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[AirportName]' derivation='None' name='[none:AirportName:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:AirportName:nk]' />
+            </encodings>
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[avg:Distance:qk]</rows>
+        <cols>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[avg:AirTime:qk]</cols>
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='0' text-width='180'>
+            <formatted-text>
+              <run bold='true'>Most flight times lie in the range of 30 to 160 minutes.</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='92.789040664580938'>
+                  <node-reference>
+                    <axis>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[avg:AirTime:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='839.38373894828987'>
+                  <node-reference>
+                    <axis>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[avg:Distance:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='-31' y='-105' />
+          </annotation>
+          <annotation class='point' id='1' mark-position='1' pullback='0' text-width='180'>
+            <formatted-text>
+              <run bold='true'>This trend line represents the overall direction of average distance traveled to average air time. As one would expect, pretty much all the points lie on this line since intuitively the longer one flies the longer one must be in the air.</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='190.7330280327497'>
+                  <node-reference>
+                    <axis>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[avg:AirTime:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='1543.5647279988684'>
+                  <node-reference>
+                    <axis>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[avg:Distance:qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='-90' y='-121' />
+          </annotation>
+        </annotations>
+      </table>
+      <simple-id uuid='{D78C3E60-FD51-4194-A15F-718AE4A5F3BF}' />
+    </worksheet>
+    <worksheet name='Q3.2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Year Over Year Growth for Distance and Aircrafts</run>
+          </formatted-text>
+        </title>
+        <caption>
+          <formatted-text>
+            <run>Delta Air Lines shows by far the most growth for both total distance traveled and number of planes. Notably, Southwest Airlines has minimal growth in the number of planes and a decrease in the total distance traveled.</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AirTraffic' name='federated.1gkvuu60poo5i810t8n8a0ch0iaq' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1gkvuu60poo5i810t8n8a0ch0iaq'>
+            <column caption='Airline Name' datatype='string' name='[AirlineName]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Distance]' role='measure' type='quantitative' />
+            <column caption='Flight Date' datatype='date' name='[FlightDate]' role='dimension' type='ordinal' />
+            <column caption='Tail Number' datatype='string' name='[Tail_Number]' role='dimension' type='nominal' />
+            <column-instance column='[AirlineName]' derivation='None' name='[none:AirlineName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Tail_Number]' derivation='CountD' name='[pcdf:ctd:Tail_Number:qk]' pivot='key' type='quantitative'>
+              <table-calc diff-options='Relative' level-address='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[yr:FlightDate:ok]' ordering-field='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[FlightDate]' ordering-type='Field' type='PctDiff'>
+                <address>
+                  <value>-1</value>
+                </address>
+              </table-calc>
+            </column-instance>
+            <column-instance column='[Distance]' derivation='Sum' name='[pcdf:sum:Distance:qk]' pivot='key' type='quantitative'>
+              <table-calc diff-options='Relative' level-address='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[yr:FlightDate:ok]' ordering-field='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[FlightDate]' ordering-type='Field' type='PctDiff'>
+                <address>
+                  <value>-1</value>
+                </address>
+              </table-calc>
+            </column-instance>
+            <column-instance column='[FlightDate]' derivation='Year' name='[yr:FlightDate:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[pcdf:sum:Distance:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[pcdf:ctd:Tail_Number:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[yr:FlightDate:ok]' kind='hide'>
+            <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[yr:FlightDate:ok]' />
+              <groupfilter function='member' level='[yr:FlightDate:ok]' member='2018' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[:Measure Names]' value='97' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[yr:FlightDate:ok]' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[Multiple Values]</rows>
+        <cols>([federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:AirlineName:nk] / ([federated.1gkvuu60poo5i810t8n8a0ch0iaq].[yr:FlightDate:ok] / [federated.1gkvuu60poo5i810t8n8a0ch0iaq].[:Measure Names]))</cols>
+      </table>
+      <simple-id uuid='{963C5DBA-034B-441F-831F-A8F5FA24413D}' />
+    </worksheet>
+    <worksheet name='Q3.3'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Average Distance Traveled by Planes per Carrier</run>
+          </formatted-text>
+        </title>
+        <caption>
+          <formatted-text>
+            <run>Southwest Airlines has the highest average distance traveled by plane, plus, based on the previous visualization, they have the lowest growth in the number of planes. Taken together with the fact that they cover the most distance in total (visualization Q1.1), it seems that they are the most efficient in terms of getting the most out of their aircrafts.</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AirTraffic' name='federated.1gkvuu60poo5i810t8n8a0ch0iaq' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1gkvuu60poo5i810t8n8a0ch0iaq'>
+            <column caption='Airline Name' datatype='string' name='[AirlineName]' role='dimension' type='nominal' />
+            <column caption='average distance traveled by planes' datatype='real' name='[Calculation_4602889928724008962]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Distance]) / COUNTD([Tail_Number])' />
+            </column>
+            <column datatype='real' name='[Distance]' role='measure' type='quantitative' />
+            <column caption='Tail Number' datatype='string' name='[Tail_Number]' role='dimension' type='nominal' />
+            <column-instance column='[AirlineName]' derivation='None' name='[none:AirlineName:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_4602889928724008962]' derivation='User' name='[usr:Calculation_4602889928724008962:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:AirlineName:nk]' value='174' />
+            <format attr='text-format' field='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[usr:Calculation_4602889928724008962:qk]' value='n#,##0,,.00M;-#,##0,,.00M' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[usr:Calculation_4602889928724008962:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[usr:Calculation_4602889928724008962:qk]</rows>
+        <cols>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:AirlineName:nk]</cols>
+      </table>
+      <simple-id uuid='{F737E5BC-E6E2-404A-8BD8-158B19034119}' />
+    </worksheet>
+    <worksheet name='Q4 Extra'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Cancellations by Reason and State</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='AirTraffic' name='federated.1gkvuu60poo5i810t8n8a0ch0iaq' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1gkvuu60poo5i810t8n8a0ch0iaq'>
+            <column caption='Cancellation Reason' datatype='string' name='[CancellationReason]' role='dimension' type='nominal' />
+            <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[CancellationReason]' derivation='Count' name='[cnt:CancellationReason:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[CancellationReason]' derivation='None' name='[none:CancellationReason:nk]' pivot='key' type='nominal' />
+            <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:CancellationReason:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:CancellationReason:nk]' member='&quot;Carrier&quot;' />
+              <groupfilter function='member' level='[none:CancellationReason:nk]' member='&quot;National Air System&quot;' />
+              <groupfilter function='member' level='[none:CancellationReason:nk]' member='&quot;Security&quot;' />
+              <groupfilter function='member' level='[none:CancellationReason:nk]' member='&quot;Weather&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:State:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Alabama&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Alaska&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Arizona&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Arkansas&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;California&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Colorado&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Connecticut&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Florida&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Georgia&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Hawaii&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Idaho&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Illinois&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Indiana&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Iowa&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Kansas&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Kentucky&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Louisiana&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Maine&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Maryland&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Massachusetts&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Michigan&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Minnesota&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Mississippi&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Missouri&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Montana&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Nebraska&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Nevada&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;New Hampshire&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;New Jersey&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;New Mexico&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;New York&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;North Carolina&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;North Dakota&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Ohio&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Oklahoma&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Oregon&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Pennsylvania&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Puerto Rico&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Rhode Island&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;South Carolina&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;South Dakota&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Tennessee&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Texas&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;U.S. Virgin Islands&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Utah&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Vermont&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Virginia&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Washington&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;West Virginia&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Wisconsin&quot;' />
+              <groupfilter function='member' level='[none:State:nk]' member='&quot;Wyoming&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:CancellationReason:nk]</column>
+            <column>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:State:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:CancellationReason:nk]' value='65' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[cnt:CancellationReason:qk]' palette='red_gold_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[cnt:CancellationReason:qk]' />
+              <text column='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[cnt:CancellationReason:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:State:nk]</rows>
+        <cols>[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:CancellationReason:nk]</cols>
+      </table>
+      <simple-id uuid='{15C7BFB8-8A83-40B8-8B1E-A5923BF150AA}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Q4'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='AirTraffic' name='federated.1gkvuu60poo5i810t8n8a0ch0iaq' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1gkvuu60poo5i810t8n8a0ch0iaq'>
+        <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+        <column-instance column='[State]' derivation='None' name='[none:State:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='7' param='horz' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='5' type-v2='layout-basic' w='82400' x='800' y='1000' />
+            <zone fixed-size='160' h='98000' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='16000' x='83200' y='1000'>
+              <zone fixed-size='70' h='9750' id='9' is-fixed='true' name='Q2.3' pane-specification-id='0' param='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[avg:DepDelay:qk]' type-v2='color' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='66875' id='13' name='Q4 Extra' param='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:State:nk]' type-v2='filter' values='cascading' w='16000' x='83200' y='10750'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8125' id='15' name='Q4 Extra' pane-specification-id='0' param='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[cnt:CancellationReason:qk]' type-v2='color' w='16000' x='83200' y='77625'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='13250' id='11' name='Q2.4' pane-specification-id='0' param='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:CancellationReason:nk]' type-v2='color' w='16000' x='83200' y='85750'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='40125' id='3' name='Q2.3' w='35400' x='3300' y='4125' />
+        <zone h='35625' id='10' name='Q2.4' w='77400' x='1700' y='46875' />
+        <zone h='40625' id='12' name='Q4 Extra' w='42600' x='39300' y='4500' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1150' minheight='1150' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='23' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='22' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='280' h='40125' id='3' is-fixed='true' name='Q2.3' w='35400' x='3300' y='4125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='70' h='9750' id='9' name='Q2.3' pane-specification-id='0' param='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[avg:DepDelay:qk]' type-v2='color' w='16000' x='83200' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='66875' id='13' mode='checkdropdown' name='Q4 Extra' param='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:State:nk]' type-v2='filter' values='cascading' w='16000' x='83200' y='10750'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='40625' id='12' is-fixed='true' name='Q4 Extra' w='42600' x='39300' y='4500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='8125' id='15' name='Q4 Extra' pane-specification-id='0' param='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[cnt:CancellationReason:qk]' type-v2='color' w='16000' x='83200' y='77625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='35625' id='10' is-fixed='true' name='Q2.4' w='77400' x='1700' y='46875'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='13250' id='11' name='Q2.4' pane-specification-id='0' param='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:CancellationReason:nk]' type-v2='color' w='16000' x='83200' y='85750'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{97CC2B0E-F2AA-4202-8026-BEA5935A6201}' />
+    </dashboard>
+    <dashboard name='Story 1' type='storyboard'>
+      <style>
+        <style-rule element='story-point-caption'>
+          <format attr='width' value='440' />
+        </style-rule>
+      </style>
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98340' id='1' param='vert' removable='false' type-v2='layout-flow' w='98426' x='787' y='830'>
+            <zone h='3423' id='3' type-v2='title' w='98426' x='787' y='830' />
+            <zone fixed-size='132' h='13693' id='4' is-fixed='true' paired-zone-id='5' removable='false' type-v2='flipboard-nav' w='98426' x='787' y='4253' />
+            <zone h='81224' id='5' paired-zone-id='4' removable='false' type-v2='flipboard' w='98426' x='787' y='17946'>
+              <flipboard active-id='12' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point caption='To start of the analysis, we&apos;ll look at a basic measure. This bar chart compares the number of total flights over 2018-2019 for each airline carrier. Southwest Airlines has the most with over 2.5 million, while Delta Air Lines and American Airlines both come in under 2 million.' captured-sheet='Q1.1' id='1' />
+                  <story-point caption='Breaking the previous measure down a bit more, here we can see how many flights each airline carrier totals each month over the same time period.' captured-sheet='Q1.2' id='2' />
+                  <story-point caption='This visualization shows similar data in a different format, this time it&apos;s the number of flights broken up by the top ten origin airports. ' captured-sheet='Q1.3' id='3' />
+                  <story-point caption='Here we start an analysis of delayed and cancelled flights. This chart shows the number of delayed flights per month in 2019.' captured-sheet='Q2.1' id='4' />
+                  <story-point caption='This chart goes more in depth into the average departure delay times, but this time per state. The three states with the highest average delay times are North Dakota, West Viriginia, and Wyoming. ' captured-sheet='Q2.2' id='5' />
+                  <story-point caption='Here we can view similar data in a more intuitive geographic visual. We can see that it&apos;s largely states in the northern part of the U.S. that have higher average departure delays.' captured-sheet='Q2.3' id='6'>
+                    <capturedDeltas>
+                      <worksheet name='Q2.3'>
+                        <style delta-type='added'>
+                          <style-rule element='axis'>
+                            <encoding attr='space' class='0' field='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[Latitude (generated)]' field-type='quantitative' max='12637184.580103559' min='1763362.2547781582' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                            <encoding attr='space' class='0' field='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[Longitude (generated)]' field-type='quantitative' max='33547531.591905542' min='21864560.60972527' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                          </style-rule>
+                        </style>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point caption='Now we look at the numbers of cancelled flights instead of delayed. This chart shows how many flights were cancelled in each month broken up by cancellation reason. ' captured-sheet='Q2.4' id='7' />
+                  <story-point caption='Now we want to estimate the costs for each airline. We&apos;ll start with this chart that shows the average distance compared to the average air time per flight. Unsurprisingly, the airports that lie higher on the trendline here are located in Hawaii and Alaska.' captured-sheet='Q3.1' id='8' />
+                  <story-point caption='Here we see the Year over Year Growth for planes and for total distance by airline. Delta Air Lines shows the highest growth by far, which can be interpreted as a positive sign for the company. However, Southwest Airlines&apos; lack of growth could indicate higher efficiency in terms of plane use.' captured-sheet='Q3.2' id='9' />
+                  <story-point caption='This graphic shows the average distance traveled by each plane owned by the different airlines. Southwest Airlines has the highest average, which again, could indicate higher efficiency, however it could also mean higher equipment costs.' captured-sheet='Q3.3' id='10' />
+                  <story-point caption='This chart shows the number of cancellations broken up by reason and state. It should help ascertain where most cancellations are happening, and by combining this information with the airlines&apos; frequent origin airports, could help determine which airlines are more susceptible to cancellations.' captured-sheet='Q4 Extra' id='11' />
+                  <story-point caption='This dashboard shows a cohesive view of cancellations and delays. The filters on the side allow for varied views.' captured-sheet='Q4' id='12' />
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{14ECBDBB-C067-4295-A665-6DE9192BFF5F}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Q1.1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{07C3C30C-AE09-459F-9599-C170C3FC5285}' />
+    </window>
+    <window class='worksheet' name='Q1.2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:AirlineName:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{8DED65DA-5425-4627-AA2F-C0484DCB2778}' />
+    </window>
+    <window class='worksheet' name='Q1.3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:AirlineName:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{92D885E3-6389-4F33-B139-EE39C9EF1CDE}' />
+    </window>
+    <window class='worksheet' name='Q2.1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[yr:FlightDate:ok]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:Calculation_4602889928386678784:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D8299B57-EF4A-4605-A262-2353111C3FE1}' />
+    </window>
+    <window class='worksheet' name='Q2.2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:Calculation_4602889928386678784:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[avg:DepDelay:qk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='94'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D5B30A82-8F41-4E9A-B6A2-302CA8B597AB}' />
+    </window>
+    <window class='worksheet' name='Q2.3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:Calculation_4602889928386678784:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[avg:DepDelay:qk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='94'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{8DC0BC9F-2AE4-4117-A946-55CA3903CDAF}' />
+    </window>
+    <window class='worksheet' name='Q2.4'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:CancellationReason:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CF20CDB5-6876-4CAC-BB5C-A30B7144E5E4}' />
+    </window>
+    <window class='worksheet' name='Q3.1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:AirportName:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{150CBED3-0687-4E61-A0E3-F6BCC787B5F7}' />
+    </window>
+    <window class='worksheet' name='Q3.2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='94'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FB6D88E4-E1D6-4C45-9A67-CBDD907F15BF}' />
+    </window>
+    <window class='worksheet' name='Q3.3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='94'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E7013A59-CA0A-43B8-A61E-73D540DB7B0A}' />
+    </window>
+    <window class='worksheet' name='Q4 Extra'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[none:State:nk]' type='filter' values='cascading' />
+            <card pane-specification-id='0' param='[federated.1gkvuu60poo5i810t8n8a0ch0iaq].[cnt:CancellationReason:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C1D69707-3D6D-4B19-B053-DB8154A31D6D}' />
+    </window>
+    <window class='dashboard' name='Q4'>
+      <viewpoints>
+        <viewpoint name='Q2.3'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Q2.4'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Q4 Extra' />
+      </viewpoints>
+      <active id='9' />
+      <simple-id uuid='{2AE3E4A9-B70F-44E6-AB01-F8B25294D777}' />
+    </window>
+    <window class='dashboard' name='Story 1'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{0344F8A4-05FD-48B9-9992-626DF5C46DD8}' />
+    </window>
+  </windows>
+</workbook>
