@@ -1,6 +1,7 @@
 /*
+Delta Air Lines, American Airlines, and Southwest Airlines are three of the largest airlines in the United States. 
 The goal is to provide actionable data-derived business insights using flight and airport data that will be useful in making 
-investment decisions. The data was originally sourced from the Bureau of Transportation Statistics.
+a decision about which airline to invest in. The data was originally sourced from the Bureau of Transportation Statistics.
 */
 
 -- setting the default schema to AirTraffic
