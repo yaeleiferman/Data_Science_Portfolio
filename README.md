@@ -2,7 +2,7 @@
 
 Welcome to my data science portfolio - these are projects I did over the course of a full-time in-person Data Science bootcamp I completed.
 
-Of note is my [Link Text](#capstone-startup-analysis), which was entirely self-directed. 
+Of note is my [capstone project](#capstone-startup-analysis), which was entirely self-directed. 
 
 Some projects are not as polished as I would have liked, but still demonstrate my skills despite the intense time constraints.
 
@@ -19,7 +19,7 @@ The goal was to predict the success of any given startup company. The challenge 
 There were essentially two attempts at solving this problem. For both I used numpy, pandas, and seaborn to clean and explore the data, then used various functions from scikit-learn, such as train test split, GridSearchCV, and scalers to prepare the data for proper modelling. I tried different models like random forests, SVC, and K nearest neighbors to test for the most accurate combination. I also utilized TensorFlow and neural networks in Keras for the same purpose. The scikit-learn metrics of precision score, f1 score, and recall score were used to determine accuracy of different models. 
 
 #### Attempt 1
-Sourced data from Kaggle (although I suspect that it was originally from Crunchbase) that contained all sorts of data for about 63,000 companies. Separately sourced data from Data.world that had more limited data for about 42,000 companies, but did contain descriptions which the first dataset did not. My analysis and machine learning work has been done in [Startup_Analysis.ipynb](https://github.com/yaeleiferman/Data_Science_Portfolio/blob/90692a220c006796e72dededc6f8f9bcefee1096/Capstone%20Startup%20Analysis/Attempt%201%20-%20Random%20Data%20from%20the%20Internet/Startup_Analysis.ipynb). This folder also contains presentations I gave to my data science cohort over the course of the bootcamp.
+Sourced data from Kaggle (although I suspect that it was originally from Crunchbase) that contained all sorts of data for about 63,000 companies. Separately sourced data from Data.world that had more limited data for about 42,000 companies, but did contain descriptions which the first dataset did not. My analysis and machine learning work has been done in [this notebook](https://github.com/yaeleiferman/Data_Science_Portfolio/blob/90692a220c006796e72dededc6f8f9bcefee1096/Capstone%20Startup%20Analysis/Attempt%201%20-%20Random%20Data%20from%20the%20Internet/Startup_Analysis.ipynb). This folder also contains presentations I gave to my data science cohort over the course of the bootcamp.
 
 #### Attempt 2
 After struggling endlessly to make the previous messy data workable I ended up deciding it was too untrustworthy for the analysis to really mean anything. So for [this](https://github.com/yaeleiferman/Data_Science_Portfolio/blob/90692a220c006796e72dededc6f8f9bcefee1096/Capstone%20Startup%20Analysis/Attempt%202%20-%20Y%20Combinator%20Scrape/YC_Analysis.ipynb) last minute attempt at a coherent project, I scraped Y Combinator’s website to obtain information on all the companies they’ve worked with, and repeated essentially the same analysis on that dataset.  [Here](https://prezi.com/view/LYSUp5QBeuqK2v5Axbae/?referral_token=twKf0dlnB3FN) is the presentation I gave at the bootcamp’s Demo Day which summarizes my journey throughout this project, depicted in prezi as a literal journey.
