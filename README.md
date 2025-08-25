@@ -31,8 +31,12 @@ Processed a large dataset of hotel reviews (and other details about the stay) us
 
 ### SQL and Tableau Air Traffic Analysis
 
-Conducted SQL queries and analysis in MySQL Workbench to answer specific business questions about flight and airport data. Then used this same data to create an interactive Tableau presentation to convey actionable insights and allow others to derive new insights in real time. 
+Conducted SQL queries and analysis in MySQL Workbench to answer specific business questions about flight and airport data. Then used this same data to create an [interactive Tableau presentation](https://public.tableau.com/views/AirTrafficPresentation/Dashboard-Delays_and_Cancellations?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link) to convey actionable insights and allow others to derive new insights in real time. 
 
 ### Statistics and Public Health
 
 Used mosquito data from Chicago to compute the probability of finding West Nile Virus at any particular time and location. I cleaned the data and did thorough EDA using numpy, pandas, matplotlib, and seaborn, then conducted a statistical analysis using scipy and statsmodels.
+
+### AWS Data Exchange
+
+Collaborated with UX designers and software engineers to provide AWS professionals with data-backed feature improvements to AWS Data Exchange.
